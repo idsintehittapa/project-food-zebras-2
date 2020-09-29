@@ -9,30 +9,39 @@ const request = new Request(apiData, {
     'user-key': apiKey
   })
 })
-console.log(request);
 
 fetch(request)
   .then((response) => {
     return response.json()
   })
   .then((json) => {
-    // console.log(json);
+    console.log(json);
     // console.log(json.restaurants[0].restaurant.name)
+    json.forEach((item) => {
+      document.querySelector('.rest-picture').src = item.image
+      })
 
-    const newArray = json.restaurants.map(restaurantInformation)
-
-    console.log(newArray)
-    newArray.forEach((item, index) => {
-      restaurants[index].querySelector('.rest-name').innerText = item.restName
-      restaurants[index].querySelector('.rest-address').innerText = item.restAddress
-      restaurants[index].querySelector('.rest-average-cost').innerText = item.averageCost
-      restaurants[index].querySelector('.rest-rating').innerText = item.averageRating
-      restaurants[index].querySelector('.rest-picture').src = item.image
-    })
+    // json.forEach((results) => {
+    //   document.getElementById('restaurantsContainer').innerHTML += results.restaurants[0].restaurant.name;
   })
+    
+    
 
+
+    // console.log(newArray)
+    // .forEach((item, index) => {
+    //   restaurants[index].querySelector('.rest-name').innerText = item.restName
+    //   restaurants[index].querySelector('.rest-address').innerText = item.restAddress
+    //   restaurants[index].querySelector('.rest-average-cost').innerText = item.averageCost
+    //   restaurants[index].querySelector('.rest-rating').innerText = item.averageRating
+      // restaurants[index].querySelector('.rest-picture').src = item.image
+    // })
+  // })
+
+  
   const restaurantInformation = (information) => {
     const restName = information.restaurant.name
+    console.log(restName);
     const restAddress = information.restaurant.location.address
     const averageCost = information.restaurant.average_cost_for_two + " " + information.restaurant.currency
     const averageRating = information.restaurant.user_rating.aggregate_rating
