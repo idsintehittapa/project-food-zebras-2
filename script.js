@@ -39,9 +39,9 @@ fetch(request)
       restaurantHTML += `<img class="restroImage" src="${item.image}">`;
       restaurantHTML += `<h3>${item.restName}</h3>`;
       restaurantHTML += `<p>${item.restAddress}</h3>`;
-      restaurantHTML += `<p>${item.averageCost}</p>`;
+      restaurantHTML += `<p>Average cost pp ${item.averageCost}</p>`;
       restaurantHTML += `<p>${item.estabType}</p>`;
-      restaurantHTML += `<p>${item.averageRating}</p>`;
+      restaurantHTML += `<p>${item.averageRating} &#9733;</p>`;
       restaurantHTML += `</div>`;
     })
     document.getElementById('restaurantsContainer').innerHTML = restaurantHTML;
