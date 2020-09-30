@@ -1,4 +1,3 @@
-
 @import url(//db.onlinewebfonts.com/c/1231ae63051a492545b18104b75ebf51?family=Uber+Move+Text);
 
 body {
@@ -10,7 +9,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-left: 60px;
+  border-bottom: 1px solid #b5b3b3;
 }
 
 .hamburger {
@@ -55,9 +54,11 @@ body {
 }
 
 .restaurants-header {
-  font-family: UberMove-Bold, sans-serif;
-  padding-left: 35px;
-  margin: 20px 0;
+  width: auto;
+  font-family: UberMove, sans-serif;
+  font-weight: 400;
+  padding-left: 45px;
+  margin: 40px 20px 15px 20px;
 }
 
 .restaurants {
@@ -123,12 +124,36 @@ body {
 }
 
 @media(max-width:640px) {
+    .hamburger {
+    margin-right: 10px;
+  }
+
   .header {
     margin-left: 20px;
+    padding: 25px 0;
+  }
+
+  .header-heading {
+      font-size: 20px;
+      width: 100px;
+  }
+
+  .price-sorting,
+  .delivery-option {
+    width: 150px;
+    padding: 5px;
+  }
+
+  .price-sorting {
+    margin-bottom: 3px;
   }
 
   .empty-space-header {
     width: 20px;
+  }
+
+  .restaurants-header {
+    padding-left: 20px;
   }
 
   .rest-div {
