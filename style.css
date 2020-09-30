@@ -1,3 +1,137 @@
-.restroImage {
-  width: 200px;
+
+@import url(//db.onlinewebfonts.com/c/1231ae63051a492545b18104b75ebf51?family=Uber+Move+Text);
+
+body {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 60px;
+}
+
+.hamburger {
+  display: flex;
+  width: 30px;
+  height: 19px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 60px;
+}
+
+.hamburger div {
+  width: 24px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.header-heading,
+.header-heading span {
+  font-family: UberMoveText-Medium, sans-serif;
+  font-weight: 400;
+}
+
+.header-heading span {
+  color: #01c167;
+  font-weight: 700;
+}
+
+.price-sorting,
+.delivery-option {
+  padding: 12px;
+  border-radius: 16px;
+  border: none;
+  font-family: UberMove, sans-serif;
+  margin-right: 20px;
+  background: #eeeeee;
+}
+
+.empty-space-header {
+  width: 25%;
+}
+
+.restaurants-header {
+  font-family: UberMove-Bold, sans-serif;
+  padding-left: 35px;
+  margin: 20px 0;
+}
+
+.restaurants {
+  width: 100vw;
+}
+
+.restaurants-container {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+}
+
+.rest-div {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  font-family: UberMove, sans-serif;
+}
+
+.rest-image {
+  width: 100%;
+}
+
+.rest-div p {
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 100;
+}
+
+.rest-name {
+  font-size: 18px;
+  font-family: UberMoveText-Medium, sans-serif;
+  font-weight: 500;
+}
+
+@media(max-width:1050px) {
+  .rest-div {
+    width: 45%;
+  }
+}
+
+@media(max-width:890px) {
+  .hamburger {
+    margin-left: 10px;
+   }
+  
+  .header-heading {
+    font-size: 29px;
+  }
+
+  .price-sorting,
+  .delivery-option {
+    margin-right: 10px;
+  }
+  .rest-div {
+    width: 43%;
+  }
+}
+
+@media(max-width:640px) {
+  .header {
+    margin-left: 20px;
+  }
+
+  .empty-space-header {
+    width: 20px;
+  }
+
+  .rest-div {
+    width: 100%;
+  }
 }
