@@ -31,18 +31,17 @@ fetch(request)
       sortByPrice(newArray, sortOrder);
       let restaurantHTML = "";
       newArray.forEach((item) => {
-        restaurantHTML += `<div>`;
-        restaurantHTML += `<img class="restroImage" src="${item.image}">`;
-        restaurantHTML += `<h3>${item.restName}</h3>`;
-        restaurantHTML += `<p>${item.restAddress}</h3>`;
-        restaurantHTML += `<p>Average cost pp ${item.averageCost}</p>`;
-        restaurantHTML += `<p>${item.estabType}</p>`;
-        restaurantHTML += `<p>${item.averageRating} &#9733;</p>`;
+        restaurantHTML += `<div class="rest-div">`;
+        restaurantHTML += `<img class="rest-image" src="${item.image}">`;
+        restaurantHTML += `<h3 class="rest-name">${item.restName}</h3>`;
+        restaurantHTML += `<p class="rest-address">${item.restAddress}</h3>`;
+        restaurantHTML += `<p class="average-cost">Average cost pp ${item.averageCost}</p>`;
+        restaurantHTML += `<p class="estab-type">${item.estabType}</p>`;
+        restaurantHTML += `<p class="average-rating">${item.averageRating} &#9733;</p>`;
         restaurantHTML += `</div>`;
       })
       document.getElementById('restaurantsContainer').innerHTML = restaurantHTML;
     })
-    
 
     // price sorting function
     const sortByPrice = (newArray, sortOrder) => {
@@ -61,13 +60,13 @@ fetch(request)
     
   let restaurantHTML = "";
       newArray.forEach((item) => {
-        restaurantHTML += `<div>`;
-        restaurantHTML += `<img class="restroImage" src="${item.image}">`;
-        restaurantHTML += `<h3>${item.restName}</h3>`;
-        restaurantHTML += `<p>${item.restAddress}</h3>`;
-        restaurantHTML += `<p>Average cost pp ${item.averageCost}</p>`;
-        restaurantHTML += `<p>${item.estabType}</p>`;
-        restaurantHTML += `<p>${item.averageRating} &#9733;</p>`;
+        restaurantHTML += `<div class="rest-div">`;
+        restaurantHTML += `<img class="rest-image" src="${item.image}">`;
+        restaurantHTML += `<h3 class="rest-name">${item.restName}</h3>`;
+        restaurantHTML += `<p class="rest-address">${item.restAddress}</h3>`;
+        restaurantHTML += `<p class="average-cost">Average cost pp ${item.averageCost}</p>`;
+        restaurantHTML += `<p class="estab-type">${item.estabType}</p>`;
+        restaurantHTML += `<p class="average-rating">${item.averageRating} &#9733;</p>`;
         restaurantHTML += `</div>`;
       })
       document.getElementById('restaurantsContainer').innerHTML = restaurantHTML;
